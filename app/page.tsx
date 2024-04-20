@@ -171,7 +171,7 @@ export default function Home() {
               <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
             </svg>
           </span>
-          <div className="bg-darkerBlue rounded-md m-auto w-[93vw] md:w-[70vw] h-[60vh] grid place-content-center gap-4 p-4">
+          <div className="bg-darkerBlue rounded-md m-auto w-[93vw] md:w-[70vw] h-[60vh] md:min-h-fit grid place-content-center gap-4 p-4">
             <p className="text-white uppercase tracking-wider font-extrabold text-lg md:text-xl">
               Classification Complete
             </p>
