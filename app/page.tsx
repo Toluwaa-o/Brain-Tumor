@@ -125,7 +125,7 @@ export default function Home() {
               </svg>
             </span>
             <Image
-              src={"https://voluntary-vallie-toluwalashe.koyeb.app/" + imgSrc}
+              src={"https://voluntary-vallie-toluwalashe.koyeb.app" + imgSrc}
               alt="Brain Scan"
               width={128}
               height={128}
@@ -176,7 +176,7 @@ export default function Home() {
               Classification Complete
             </p>
             <Image
-              src={"https://voluntary-vallie-toluwalashe.koyeb.app/" + imgSrc}
+              src={"https://voluntary-vallie-toluwalashe.koyeb.app" + imgSrc}
               alt="Brain Scan"
               width={250}
               height={250}
