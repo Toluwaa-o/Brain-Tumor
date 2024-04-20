@@ -4,6 +4,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 
 interface ResultData {
   result: string;
+  probability: number;
 }
 
 export default function Home() {
@@ -171,7 +172,7 @@ export default function Home() {
               <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
             </svg>
           </span>
-          <div className="bg-darkerBlue rounded-md m-auto w-[93vw] md:w-[70vw] h-[60vh] md:min-h-fit md:h-[unset] grid place-content-center gap-4 p-4">
+          <div className="bg-darkerBlue rounded-md m-auto w-[93vw] md:w-[70vw] min-h-fit md:h-[unset] grid place-content-center gap-4 p-4">
             <p className="text-white uppercase tracking-wider font-extrabold text-lg md:text-xl">
               Classification Complete
             </p>
@@ -194,9 +195,28 @@ export default function Home() {
                 {result.result}.
               </span>
             </p>
+            <p className={`text-white text-lg font-bold md:text-xl`}>
+              Confidence Level:{" "}
+              <span
+                className={`${
+                  result.result === "This brain scan contains a tumor"
+                    ? result.probability >= 0.5
+                      ? "text-lime-400"
+                      : "text-red-400"
+                    : 1 - result.probability >= 0.5
+                    ? "text-lime-400"
+                    : "text-red-400"
+                }`}
+              >
+                {result.result === "This brain scan contains a tumor"
+                  ? Number((result.probability * 100).toFixed(2))
+                  : Number((1 - result.probability).toFixed(2)) * 100}
+                %
+              </span>
+            </p>
             <p className="md:text-lg md:font-bold">
-              Note: Results should be confirmed by a qualified
-              healthcare professional as this model is not 100% accurate.
+              Note: Results should be confirmed by a qualified healthcare
+              professional as this model is not 100% accurate.
             </p>
           </div>
         </div>
