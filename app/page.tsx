@@ -78,7 +78,7 @@ export default function Home() {
         <p className="text-darkerBlue md:w-[50%] md:m-auto md:text-xl">
           Welcome to our brain tumor classification platform! Upload brain scan
           images for accurate tumor classification with our advanced machine
-          learning model, boasting an impressive 97.4% accuracy rate.
+          learning model, boasting an impressive 98.4% accuracy rate.
         </p>
       </span>
       <form
