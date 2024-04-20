@@ -19,7 +19,7 @@ export default function Home() {
       formData.append("img", file);
     }
 
-    fetch("https://brain-tumor-model.onrender.com/submit_image", {
+    fetch("https://voluntary-vallie-toluwalashe.koyeb.app/submit_image", {
       method: "POST",
       body: formData,
     })
@@ -38,7 +38,7 @@ export default function Home() {
   const getClassification = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    fetch("https://brain-tumor-model.onrender.com/classify", {
+    fetch("https://voluntary-vallie-toluwalashe.koyeb.app/classify", {
       method: "POST",
       body: JSON.stringify({ img: "." + imgSrc }),
       headers: {
@@ -125,7 +125,7 @@ export default function Home() {
               </svg>
             </span>
             <Image
-              src={"https://brain-tumor-model.onrender.com/" + imgSrc}
+              src={"https://voluntary-vallie-toluwalashe.koyeb.app/" + imgSrc}
               alt="Brain Scan"
               width={128}
               height={128}
@@ -176,7 +176,7 @@ export default function Home() {
               Classification Complete
             </p>
             <Image
-              src={"https://brain-tumor-model.onrender.com/" + imgSrc}
+              src={"https://voluntary-vallie-toluwalashe.koyeb.app/" + imgSrc}
               alt="Brain Scan"
               width={250}
               height={250}
