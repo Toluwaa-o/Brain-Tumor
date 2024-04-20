@@ -196,7 +196,7 @@ export default function Home() {
             </p>
             <p className="md:text-lg md:font-bold">
               Note: Results should be confirmed by a qualified
-              healthcare professional.
+              healthcare professional as this model is not 100% accurate.
             </p>
           </div>
         </div>
