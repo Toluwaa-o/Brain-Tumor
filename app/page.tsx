@@ -4,7 +4,6 @@ import { ChangeEvent, FormEvent, useState } from "react";
 
 interface ResultData {
   result: string;
-  probability: number;
 }
 
 export default function Home() {
@@ -193,25 +192,6 @@ export default function Home() {
                 }`}
               >
                 {result.result}.
-              </span>
-            </p>
-            <p className={`text-white text-lg font-bold md:text-xl`}>
-              Confidence Level:{" "}
-              <span
-                className={`${
-                  result.result === "This brain scan contains a tumor"
-                    ? result.probability >= 0.5
-                      ? "text-lime-400"
-                      : "text-red-400"
-                    : 1 - result.probability >= 0.5
-                    ? "text-lime-400"
-                    : "text-red-400"
-                }`}
-              >
-                {result.result === "This brain scan contains a tumor"
-                  ? Number((result.probability * 100).toFixed(2))
-                  : Number((1 - result.probability).toFixed(2)) * 100}
-                %
               </span>
             </p>
             <p className="md:text-lg md:font-bold">
